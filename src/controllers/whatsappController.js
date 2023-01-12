@@ -1,8 +1,8 @@
 const verifyToken = (req, res) => {
     try {
-        const accessTocken = 'lksjlkjsalkdlkasjd';
+        const accessTocken = 'LKSAJKL809-2738SADSD-OPJNAS986-87932KLJ';
         const token = req.query['hub.verify_token'];
-        const challenge = req.body['hub.challenge'];
+        const challenge = req.query['hub.challenge'];
 
         if (token && challenge && token === accessTocken) {
             res.send(challenge);
