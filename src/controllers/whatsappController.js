@@ -4,8 +4,11 @@ const verifyToken = (req, res) => {
         const token = req.query['hub.verify_token'];
         const challenge = req.query['hub.challenge'];
 
+        console.log('verifyToken => ',  accessTocken, token, challenge)
         if (token && challenge && token === accessTocken) {
             res.send(challenge);
+        } else {
+            res.status(400).send();
         }
 
     } catch (error) {
