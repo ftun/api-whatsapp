@@ -6,15 +6,13 @@ const verifyToken = (req, res) => {
 
         console.log('verifyToken => ',  accessTocken, token, challenge)
         if (token && challenge && token === accessTocken) {
-            res.send(challenge);
+            return res.send(challenge);
         } else {
-            res.status(400).send();
+            return res.status(400).send();
         }
-
     } catch (error) {
-        res.status(400).send();
+        return res.status(400).send();
     }
-    res.send('Verify Token');
 }
 
 const receivedMessage = (req, res) => {
