@@ -1,0 +1,17 @@
+{
+  "name": "calculadora-binaria",
+  "version": "1.0.0",
+  "description": "Aplicación para convertir binarios a decimal y viceversa",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./*.spec.js -t 10000"
+  },
+  "author": "Roberth Borges",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "mockery": "^2.1.0"
+  }
+}
