@@ -19,16 +19,14 @@ const convertirBinarioDecimal = (valor) => {
 // CORRECCION POST PRUEBA:
 const convertirBinarioDecimal = (valor) => {
 
-    let potencia = 2
+    let decimal = 0
     let newVal = String(valor).split("").reverse()
     let result = 0
     newVal.forEach(element => {
-        console.log(element)
-        if (element > 0) result += Math.pow(Number(element), potencia) // Number(element) * potencia
-        potencia++
+        if (element > 0) result += Math.pow(Number(decimal), 2) // Number(element) * potencia
+        decimal++
     });
 
-    console.log(result)
 }
 
 exports.convertirBinarioDecimal = convertirBinarioDecimal
